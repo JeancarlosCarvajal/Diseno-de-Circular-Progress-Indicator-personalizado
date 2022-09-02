@@ -26,21 +26,60 @@ class _GraficasCircularesPageState extends State<GraficasCircularesPage> {
         },
         child: Icon(Icons.refresh),
       ),
-      body: Center(
-         child: Container(
-            width: 300,
-            height: 300,
-            // color: Colors.red, // pruebas
-            // child: Text('$porcentaje %', style: TextStyle(fontSize: 50.0), // pruebas
-            child: RadialProgress(
-              porcentaje: porcentaje,
-              colorPrimario: Colors.purple,
-              colorSecundario: Colors.black,
-              grosorSecundario: 8.0,
-              grosorPrimario: 15.0
-            ),  
-        ), 
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              CustomRadialProgress(porcentaje: porcentaje, color: Colors.blue,),
+              CustomRadialProgress(porcentaje: porcentaje, color: Colors.purple,),
+            ],
+          ),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              CustomRadialProgress(porcentaje: porcentaje, color: Colors.lightGreen,),
+              CustomRadialProgress(porcentaje: porcentaje, color: Colors.indigoAccent,),
+            ],
+          )
+
+
+        ],
       )
+    );
+  }
+}
+
+class CustomRadialProgress extends StatelessWidget {
+  const CustomRadialProgress({
+    Key? key,
+    required this.porcentaje,
+    required this.color
+  }) : super(key: key);
+
+  final double porcentaje;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+       child: Container(
+          width: 180,
+          height: 180,
+          // color: Colors.red, // pruebas
+          // child: Text('$porcentaje %', style: TextStyle(fontSize: 50.0), // pruebas
+          child: RadialProgress(
+            porcentaje: porcentaje,
+            colorPrimario: this.color,
+            colorSecundario: Colors.grey,
+            grosorSecundario: 8.0,
+            grosorPrimario: 15.0
+          ),  
+      ), 
     );
   }
 }
