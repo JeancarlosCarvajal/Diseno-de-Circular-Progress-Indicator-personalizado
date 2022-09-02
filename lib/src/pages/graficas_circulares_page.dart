@@ -34,16 +34,16 @@ class _GraficasCircularesPageState extends State<GraficasCircularesPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              CustomRadialProgress(porcentaje: porcentaje, color: Colors.blue,),
-              CustomRadialProgress(porcentaje: porcentaje, color: Colors.purple,),
+              CustomRadialProgress(porcentaje: porcentaje, color: Color.fromARGB(255, 255, 0, 0),),
+              CustomRadialProgress(porcentaje: porcentaje, color: Color.fromARGB(255, 217, 0, 255),),
             ],
           ),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              CustomRadialProgress(porcentaje: porcentaje, color: Colors.lightGreen,),
-              CustomRadialProgress(porcentaje: porcentaje, color: Colors.indigoAccent,),
+              CustomRadialProgress(porcentaje: porcentaje, color: Color.fromARGB(255, 136, 255, 0),),
+              CustomRadialProgress(porcentaje: porcentaje, color: Color.fromARGB(255, 0, 38, 255),),
             ],
           )
 
