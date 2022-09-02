@@ -1,5 +1,5 @@
 
-import 'package:b_circular_progress/src/pages/circular_progress_page.dart';
+import 'package:b_circular_progress/src/labs/circular_progress_page.dart';
 import 'package:flutter/material.dart';
 
 
